@@ -1,0 +1,12 @@
+<svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="260" height="200" fill="#F4F7FB"/>
+  <g transform="translate(130,75)">
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#1E6FFF" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="0" cy="0" r="19" fill="none" stroke="#1E6FFF" stroke-width="1.5" opacity="0.75"/>
+    <circle cx="0" cy="0" r="9" fill="none" stroke="#1E6FFF" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="0" y2="-30" stroke="#0B0E13" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2.5" fill="#0B0E13"/>
+  </g>
+  <text x="130" y="140" font-family="Oswald, Arial, sans-serif" font-weight="700" font-size="32" letter-spacing="4" fill="#0B0E13" text-anchor="middle">RADAR</text>
+  <text x="130" y="158" font-family="Inter, Arial, sans-serif" font-size="9" letter-spacing="2.5" fill="#7C8896" text-anchor="middle">AUCTION BROKER</text>
+</svg>
