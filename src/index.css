@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root {
-  height: 100%;
-}
+html, body, #root { min-height: 100%; }
+body { background: #0B0E13; color: #F4F7FB; font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid #4FE0FF; outline-offset: 2px; border-radius: 6px; }
+@keyframes sweep { to { transform: rotate(360deg); } }
+.sweep { animation: sweep 6s linear infinite; transform-box: view-box; transform-origin: 50% 50%; }
+@media (prefers-reduced-motion: reduce) { .sweep { animation: none; } * { transition: none !important; } }
+input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }

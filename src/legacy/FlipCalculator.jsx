@@ -184,7 +184,7 @@ function virtualFeeEstimate(bid, auctionHouse, titleType) {
   return 0;
 }
 
-// Comisión de broker: $300 por pujas hasta $5,000, +$100 por cada $5,000 adicionales.
+// Comisión de broker: $300 por ofertas hasta $5,000, +$100 por cada $5,000 adicionales.
 function calcularComisionBroker(bid) {
   const b = Number(bid) || 0;
   if (b <= 0) return 0;
@@ -192,7 +192,7 @@ function calcularComisionBroker(bid) {
   return 300 + 100 * (tier - 1);
 }
 
-// Depósito requerido: 10% de la puja o $500, lo que sea mayor.
+// Depósito requerido: 10% de la oferta o $500, lo que sea mayor.
 function calcularDepositoRequerido(bid) {
   const b = Number(bid) || 0;
   if (b <= 0) return 0;
@@ -463,7 +463,7 @@ export default function CopartFlipCalculator() {
           <div className="space-y-4">
             <div className="rounded-xl p-4" style={{ background: COLORS.surface, border: `1px solid ${COLORS.border}` }}>
               <h2 style={{ fontFamily: "'Oswald', sans-serif", fontSize: 15, textTransform: "uppercase", letterSpacing: "0.03em" }}>
-                Puja y fees
+                Oferta y fees
               </h2>
 
               <div className="mt-3 flex items-center justify-between flex-wrap gap-2">
@@ -518,7 +518,7 @@ export default function CopartFlipCalculator() {
 
               <div className="mt-4 space-y-3">
                 <div className="flex items-center justify-between flex-wrap gap-2">
-                  <span style={{ fontSize: 13.5 }}>Puja ganadora (hammer price)</span>
+                  <span style={{ fontSize: 13.5 }}>Oferta ganadora (hammer price)</span>
                   <Field label="" prefix="$" width="w-28" value={bid} onChange={setBid} />
                 </div>
 
@@ -605,7 +605,7 @@ export default function CopartFlipCalculator() {
             <div className="rounded-xl p-3.5 flex items-start gap-2" style={{ background: "rgba(232,84,46,0.1)", border: `1px solid ${COLORS.orange}` }}>
               <AlertTriangle size={16} className="mt-0.5 shrink-0" color={COLORS.orange} />
               <p style={{ color: COLORS.text, fontSize: 12 }}>
-                Estos números son una <strong>estimación</strong>, no una cotización final. Pueden variar según las condiciones específicas del lote, el estatus de tu cuenta pujadora (pública, licenciada, volumen), y es posible que este cálculo esté ignorando algún cargo aplicable a tu caso particular. Además, <strong>no incluye impuestos locales, transporte ni costo de reparación</strong> — revisa esas partidas por separado antes de decidir tu puja máxima.
+                Estos números son una <strong>estimación</strong>, no una cotización final. Pueden variar según las condiciones específicas del lote, el estatus de tu cuenta ofertadora (pública, licenciada, volumen), y es posible que este cálculo esté ignorando algún cargo aplicable a tu caso particular. Además, <strong>no incluye impuestos locales, transporte ni costo de reparación</strong> — revisa esas partidas por separado antes de decidir tu oferta máxima.
               </p>
             </div>
           </div>
@@ -805,7 +805,7 @@ export default function CopartFlipCalculator() {
 
             <p style={{ color: COLORS.muted, fontSize: 11.5 }} className="flex items-start gap-1.5">
               <Info size={13} className="mt-0.5 shrink-0" />
-              Este resumen es una guía de estimación, no asesoría financiera. Verifica siempre fees reales de Copart, cotizaciones de partes/mano de obra y el estado real del título antes de pujar.
+              Este resumen es una guía de estimación, no asesoría financiera. Verifica siempre fees reales de Copart, cotizaciones de partes/mano de obra y el estado real del título antes de ofertar.
             </p>
           </div>
         )}

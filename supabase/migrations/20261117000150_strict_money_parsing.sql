@@ -1,0 +1,2 @@
+-- Applied after testing: negative or malformed amounts are rejected (see parse_money in 000100).
+-- Content identical to the parse_money and submit_inquiry definitions in 20261117000100_inquiry_intents_schema.sql.
